@@ -635,7 +635,32 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
 </div>
 </div>
 
-<audio id="bgMusic" autoplay loop muted playsinline>
+<!-- ===== Luxury Music Button ===== -->
+<div class="fixed top-6 right-6 z-50">
+
+    <button id="musicBtn"
+      onclick="toggleMusic()"
+      class="relative w-16 h-16 rounded-full
+             bg-white/40 backdrop-blur-xl
+             border border-white/50
+             shadow-2xl flex items-center justify-center
+             hover:scale-110 transition duration-500">
+
+      <!-- Animated Ring -->
+      <span id="musicRing"
+        class="absolute w-16 h-16 rounded-full border-2 border-rose-400 animate-ping opacity-75 hidden">
+      </span>
+
+      <!-- Icon -->
+      <span id="musicIcon" class="text-2xl text-rose-600">
+        ▶
+      </span>
+
+    </button>
+
+  </div>
+
+<audio id="bgMusic" loop playsinline>
     <source src="./le-duong.mp3" type="audio/mpeg">
   </audio>
 
@@ -643,14 +668,50 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
 
 <script>
     const music = document.getElementById("bgMusic");
+    const icon = document.getElementById("musicIcon");
+    const ring = document.getElementById("musicRing");
 
-    // Khi trang load xong → bật tiếng
-    window.addEventListener("load", function () {
-      setTimeout(() => {
-        music.muted = false;
-        music.play().catch(() => {});
-      }, 800);
+    let isPlaying = false;
+
+    // Tự chạy khi người dùng click bất kỳ đâu lần đầu
+    document.addEventListener("click", function autoStart() {
+      if (!isPlaying) {
+        playMusic();
+      }
+      document.removeEventListener("click", autoStart);
     });
+
+    function toggleMusic() {
+      if (music.paused) {
+        playMusic();
+      } else {
+        pauseMusic();
+      }
+    }
+
+    function playMusic() {
+      music.volume = 0;
+      music.play();
+
+      // Fade in
+      let fade = setInterval(() => {
+        if (music.volume < 0.3) {
+          music.volume += 0.02;
+        } else {
+          clearInterval(fade);
+        }
+      }, 100);
+
+      icon.innerHTML = "❚❚";
+      ring.classList.remove("hidden");
+      isPlaying = true;
+    }
+
+    function pauseMusic() {
+      music.pause();
+      icon.innerHTML = "▶";
+      ring.classList.add("hidden");
+    }
     </script>
 
 <script>
