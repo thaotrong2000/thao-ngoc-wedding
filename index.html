@@ -22,7 +22,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lavishly+Yours&family=Waterfall&display=swap"
         rel="stylesheet">
+        <style>
+            #snow{
+              position:fixed;
+              top:0;
+              left:0;
+              width:100%;
+              height:100%;
+              pointer-events:none;
+              z-index:9999;
+            }
+            </style>
     <style>
+
         .waterfall-regular {
             font-family: "Waterfall", cursive;
             font-weight: 400;
@@ -463,6 +475,71 @@
         </div>
     </div>
 
+    <section class="py-20 bg-[#f6f6f4]">
+        <div class="max-w-5xl mx-auto px-6">
+
+          <h2 class="text-center text-4xl font-serif text-[#5a6d4a] mb-12 tracking-wide">
+            ALBUM ẢNH CƯỚI
+          </h2>
+
+          <div class="grid grid-cols-2 gap-6">
+
+            <img src="images/HAN03955.JPG" class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500"/>
+
+            <img src="images/HAN03989.JPG" class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500"/>
+
+            <img src="images/HAN04081.JPG" class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500"/>
+
+            <!-- ảnh cuối -->
+            <div class="relative cursor-pointer gallery-img">
+
+              <img src="images/HAN04112.JPG" class="rounded-2xl"/>
+
+              <div class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center text-white text-3xl font-semibold">
+                +6
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[999999]">
+
+        <!-- counter -->
+        <div id="counter" class="absolute top-6 left-6 text-white text-lg">
+          1 / 10
+        </div>
+
+        <!-- close -->
+        <button id="closeGallery" class="absolute top-6 right-6 text-white text-3xl">
+          ✕
+        </button>
+
+        <!-- prev -->
+        <button id="prev" class="absolute left-6 text-white text-4xl">
+          ‹
+        </button>
+
+        <!-- main image -->
+        <img id="lightboxImage"
+             class="max-h-[80vh] rounded-2xl shadow-2xl"/>
+
+        <!-- next -->
+        <button id="next" class="absolute right-6 text-white text-4xl">
+          ›
+        </button>
+
+        <!-- thumbnails -->
+        <div id="thumbnails"
+             class="absolute bottom-6 flex gap-3 overflow-x-auto px-6">
+        </div>
+
+      </div>
+
 
     <!-- ===== Wedding Map Section ===== -->
 <section id="wedding-location" class="py-20 bg-gradient-to-b from-rose-50 to-white">
@@ -665,6 +742,8 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
     <source src="./le-duong.mp3" type="audio/mpeg">
   </audio>
 
+  <canvas id="snow"></canvas>
+
 </body>
 
 <script>
@@ -723,6 +802,158 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
     function closeGift() {
       document.getElementById("giftModal").classList.add("hidden");
     }
+    </script>
+
+<script>
+
+    const images = [
+    "images/HAN03955.JPG",
+    "images/HAN03989.JPG",
+
+    "images/HAN04081.JPG",
+    "images/HAN04112.JPG",
+    "images/HAN04160.JPG",
+    "images/HAN04174.JPG",
+    "images/HAN04186.JPG",
+    "images/HAN04186.JPG",
+    "images/HAN04191.JPG",
+    "images/HAN04198.JPG",
+    "images/HAN04203.JPG",
+    "images/HAN04207.JPG",
+    "images/HAN04272.JPG",
+    "images/HAN04279.JPG",
+    "images/HAN04292.JPG",
+
+    ];
+
+    let current = 0;
+
+    const lightbox1 = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const counter = document.getElementById("counter");
+    const thumbnails = document.getElementById("thumbnails");
+
+    function openGallery(index){
+      current = index;
+      lightbox1.classList.remove("hidden");
+      lightbox1.classList.add("flex");
+      updateImage();
+    }
+
+    function updateImage(){
+      lightboxImage.src = images[current];
+      counter.innerText = `${current+1} / ${images.length}`;
+
+      document.querySelectorAll(".thumb").forEach((el,i)=>{
+        el.classList.toggle("ring-2", i === current);
+      });
+    }
+
+    document.querySelectorAll(".gallery-img").forEach((img,i)=>{
+      img.addEventListener("click", ()=> openGallery(i));
+    });
+
+    document.getElementById("closeGallery").onclick = ()=>{
+      lightbox1.classList.add("hidden");
+    };
+
+    document.getElementById("next").onclick = ()=>{
+      current = (current+1) % images.length;
+      updateImage();
+    };
+
+    document.getElementById("prev").onclick = ()=>{
+      current = (current-1+images.length) % images.length;
+      updateImage();
+    };
+
+    images.forEach((src,i)=>{
+      const img = document.createElement("img");
+      img.src = src;
+      img.className = "thumb w-16 h-16 object-cover rounded-lg cursor-pointer";
+      img.onclick = ()=>{
+        current = i;
+        updateImage();
+      };
+      thumbnails.appendChild(img);
+    });
+
+    </script>
+
+<script>
+    const canvas = document.getElementById("snow");
+    const ctx = canvas.getContext("2d");
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+
+    canvas.width = width;
+    canvas.height = height;
+
+    let snowflakes = [];
+
+    function createSnowflakes() {
+      for (let i = 0; i < 20; i++) {
+        snowflakes.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 3 + 1,
+          d: Math.random() * 1
+        });
+      }
+    }
+
+    function drawSnowflakes() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+
+      for (let i = 0; i < snowflakes.length; i++) {
+        let f = snowflakes[i];
+        ctx.moveTo(f.x, f.y);
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+      }
+
+      ctx.fill();
+      moveSnowflakes();
+    }
+
+    let angle = 0;
+
+    function moveSnowflakes() {
+      angle += 0.01;
+
+      for (let i = 0; i < snowflakes.length; i++) {
+        let f = snowflakes[i];
+
+        f.y += Math.pow(f.d, 2) + 0.5;
+        f.x += Math.sin(angle) * 0.5;
+
+        if (f.y > height) {
+          snowflakes[i] = {
+            x: Math.random() * width,
+            y: 0,
+            r: f.r,
+            d: f.d
+          };
+        }
+      }
+    }
+
+    function update() {
+      drawSnowflakes();
+      requestAnimationFrame(update);
+    }
+
+    createSnowflakes();
+    update();
+
+    window.addEventListener("resize", () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    });
     </script>
 
 <script>
