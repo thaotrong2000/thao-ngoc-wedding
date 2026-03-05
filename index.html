@@ -598,7 +598,7 @@
 
   <!-- ===== Gift Modal ===== -->
 <div id="giftModal"
-class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center hidden z-50">
+class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center hidden z-[999999999]">
 
 <div class="bg-white rounded-3xl shadow-2xl max-w-5xl w-full mx-6 p-10 relative animate-fadeIn">
 
@@ -642,8 +642,7 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
 
     <button id="musicBtn"
       onclick="toggleMusic()"
-      class="relative w-16 h-16 rounded-full
-             bg-white/40 backdrop-blur-xl
+      class="relative w-12 h-12 rounded-full
              border border-white/50
              shadow-2xl flex items-center justify-center
              hover:scale-110 transition duration-500">
@@ -655,7 +654,7 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
 
       <!-- Icon -->
       <span id="musicIcon" class="text-2xl text-rose-600">
-        ▶
+        <img src="./music.svg" alt="">
       </span>
 
     </button>
@@ -704,7 +703,7 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
         }
       }, 100);
 
-      icon.innerHTML = "❚❚";
+    //   icon.innerHTML = "❚❚";
       ring.classList.remove("hidden");
       isPlaying = true;
     }
