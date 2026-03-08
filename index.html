@@ -22,19 +22,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lavishly+Yours&family=Waterfall&display=swap"
         rel="stylesheet">
-        <style>
-            #snow{
-              position:fixed;
-              top:0;
-              left:0;
-              width:100%;
-              height:100%;
-              pointer-events:none;
-              z-index:9999;
-            }
-            </style>
     <style>
-
+        #snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+    <style>
         .waterfall-regular {
             font-family: "Waterfall", cursive;
             font-weight: 400;
@@ -241,40 +240,36 @@
 
 
 
-<body class="bg-neutral-100 text-neutral-800">
-    <!-- ================= HERO ================= -->
-    <section class="relative flex items-center text-white overflow-hidden">
+<body class="bg-neutral-100 text-neutral-800 flex justify-center">
+    <div class="content-mobile max-w-[800px]">
+        <!-- ================= HERO ================= -->
+        <section class="relative flex items-center text-white overflow-hidden">
 
-        <!-- VIDEO BACKGROUND -->
-        <video
-            class="inset-0 w-full h-full object-cover"
-            autoplay
-            muted
-            loop
-            playsinline>
-            <source src="./videos/background.mp4" type="video/mp4">
-            Trình duyệt không hỗ trợ video.
-        </video>
-    </section>
+            <!-- VIDEO BACKGROUND -->
+            <video class="inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                <source src="./videos/background.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ video.
+            </video>
+        </section>
 
 
-    <section class="relative bg-white py-24 px-6 overflow-hidden">
-        <!-- Corner ornaments -->
-        <svg class="absolute top-6 left-6 w-16 h-16 opacity-40" viewBox="0 0 60 60">
-            <path d="M2 50 C20 20, 40 20, 58 2" stroke="#999" stroke-width="1.5" fill="none" />
-            <path d="M4 46 C18 22, 38 22, 54 6" stroke="#999" stroke-width="1" fill="none" />
-        </svg>
+        <section class="relative bg-white py-24 px-6 overflow-hidden">
+            <!-- Corner ornaments -->
+            <svg class="absolute top-6 left-6 w-16 h-16 opacity-40" viewBox="0 0 60 60">
+                <path d="M2 50 C20 20, 40 20, 58 2" stroke="#999" stroke-width="1.5" fill="none" />
+                <path d="M4 46 C18 22, 38 22, 54 6" stroke="#999" stroke-width="1" fill="none" />
+            </svg>
 
-        <svg class="absolute top-6 right-6 w-16 h-16 opacity-40" viewBox="0 0 60 60">
-            <path d="M58 50 C38 20, 18 20, 2 2" stroke="#999" stroke-width="1.5" fill="none" />
-            <path d="M56 46 C36 22, 16 22, 2 6" stroke="#999" stroke-width="1" fill="none" />
-        </svg>
+            <svg class="absolute top-6 right-6 w-16 h-16 opacity-40" viewBox="0 0 60 60">
+                <path d="M58 50 C38 20, 18 20, 2 2" stroke="#999" stroke-width="1.5" fill="none" />
+                <path d="M56 46 C36 22, 16 22, 2 6" stroke="#999" stroke-width="1" fill="none" />
+            </svg>
 
-        <div class="max-w-2xl mx-auto text-center">
-            <!-- Wreath + title -->
-            <div class="flex items-center justify-center gap-4 mb-10">
-                <!-- left wreath -->
-                <!-- <svg width="50" height="60" viewBox="0 0 50 60">
+            <div class="max-w-2xl mx-auto text-center">
+                <!-- Wreath + title -->
+                <div class="flex items-center justify-center gap-4 mb-10">
+                    <!-- left wreath -->
+                    <!-- <svg width="50" height="60" viewBox="0 0 50 60">
             <path
               d="M10 50 C5 35, 15 25, 25 20"
               stroke="#777"
@@ -289,7 +284,7 @@
             />
           </svg> -->
 
-                <!-- <span class="text-sm tracking-[0.3em] text-neutral-600 uppercase">
+                    <!-- <span class="text-sm tracking-[0.3em] text-neutral-600 uppercase">
             Wedding Invitation
           </span>
 
@@ -307,442 +302,428 @@
               fill="none"
             />
           </svg> -->
-            </div>
+                </div>
 
-            <!-- Invitation text -->
-            <p class="text-[26px] leading-loose text-neutral-700 fleur-de-leah-regular">
-                “Hôm nay, giữa muôn ngàn điều thay đổi, chúng ta chọn ở lại – chọn yêu, chọn nắm tay nhau bằng tất cả sự
-                trân trọng. Từ giây phút này, tương lai phía trước dù thế nào đi nữa, vẫn sẽ là một hành trình đẹp vì có
-                chúng ta cùng nhau bước tiếp.”
-            </p>
+                <!-- Invitation text -->
+                <p class="text-[26px] leading-loose text-neutral-700 fleur-de-leah-regular">
+                    “Hôm nay, giữa muôn ngàn điều thay đổi, chúng ta chọn ở lại – chọn yêu, chọn nắm tay nhau bằng tất
+                    cả sự
+                    trân trọng. Từ giây phút này, tương lai phía trước dù thế nào đi nữa, vẫn sẽ là một hành trình đẹp
+                    vì có
+                    chúng ta cùng nhau bước tiếp.”
+                </p>
 
-            <!-- Divider -->
-            <div class="flex justify-center my-12">
-                <svg width="240" height="30" viewBox="0 0 240 30">
-                    <path d="M10 15 C40 0, 80 0, 120 15 S200 30, 230 15" stroke="#aaa" stroke-width="1
+                <!-- Divider -->
+                <div class="flex justify-center my-12">
+                    <svg width="240" height="30" viewBox="0 0 240 30">
+                        <path d="M10 15 C40 0, 80 0, 120 15 S200 30, 230 15" stroke="#aaa" stroke-width="1
 
                   1.5" fill="none" />
+                    </svg>
+                </div>
+
+                <!-- Date -->
+                <div class="text-xl tracking-widest text-neutral-800 mb-12">
+                    22.03.2026
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="wedding-cover">
+            <!-- background image -->
+            <img src="./images/HAN03659.JPG" alt="Wedding photo" class="bg" />
+
+            <!-- top meta -->
+            <div class="meta">
+                <span>2026</span>
+                <span>22.03</span>
+                <span>FALL IN LOVE</span>
+            </div>
+
+            <!-- title -->
+            <div class="title">
+                <svg width="40" height="50" viewBox="0 0 50 60">
+                    <path d="M10 50 C5 35, 15 25, 25 20" stroke="white" stroke-width="1.5" fill="none" />
+                </svg>
+
+                <span>WEDDING INVITATION</span>
+
+                <svg width="40" height="50" viewBox="0 0 50 60">
+                    <path d="M40 50 C45 35, 35 25, 25 20" stroke="white" stroke-width="1.5" fill="none" />
                 </svg>
             </div>
 
-            <!-- Date -->
-            <div class="text-xl tracking-widest text-neutral-800 mb-12">
-                22.03.2026
-            </div>
+            <!-- calendar overlay -->
+            <div class="calendar-box">
+                <h3>THÁNG 3</h3>
 
+                <div class="calendar">
+                    <div class="week days" style="">
+                        <span>T2</span><span>T3</span><span>T4</span>
+                        <span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+                    </div>
 
-        </div>
-    </section>
+                    <div class="week">
+                        <span class="empty"></span><span class="empty"></span><span class="empty"></span> <span
+                            class="empty"></span><span class="empty"></span><span class="empty"></span>
+                        <span>1</span>
+                    </div>
 
-    <section class="wedding-cover">
-        <!-- background image -->
-        <img src="./images/HAN03659.JPG" alt="Wedding photo"
-            class="bg" />
+                    <div class="week">
+                        <span>2</span><span>3</span><span>4</span>
+                        <span>5</span><span>6</span><span>7</span><span>8</span>
+                    </div>
 
-        <!-- top meta -->
-        <div class="meta">
-            <span>2026</span>
-            <span>22.03</span>
-            <span>FALL IN LOVE</span>
-        </div>
+                    <div class="week">
+                        <span>9</span><span>10</span><span>11</span>
+                        <span>12</span><span>13</span><span>14</span><span>15</span>
+                    </div>
 
-        <!-- title -->
-        <div class="title">
-            <svg width="40" height="50" viewBox="0 0 50 60">
-                <path d="M10 50 C5 35, 15 25, 25 20" stroke="white" stroke-width="1.5" fill="none" />
-            </svg>
+                    <div class="week">
+                        <span>16</span><span>17</span><span>18</span>
+                        <span>19</span>
+                        <span class="event ask">20<em>Lễ nạp tài</em></span>
+                        <span class="event">21<em>Tiệc cưới</em></span>
+                        <span class="event wedding">22<em>Lễ cưới</em></span>
+                    </div>
 
-            <span>WEDDING INVITATION</span>
+                    <div class="week">
+                        <span>23</span><span>24</span><span>25</span>
+                        <span>26</span><span>27</span><span>28</span><span>29</span>
+                    </div>
 
-            <svg width="40" height="50" viewBox="0 0 50 60">
-                <path d="M40 50 C45 35, 35 25, 25 20" stroke="white" stroke-width="1.5" fill="none" />
-            </svg>
-        </div>
-
-        <!-- calendar overlay -->
-        <div class="calendar-box">
-            <h3>THÁNG 3</h3>
-
-            <div class="calendar">
-                <div class="week days" style="">
-                    <span>T2</span><span>T3</span><span>T4</span>
-                    <span>T5</span><span>T6</span><span>T7</span><span>CN</span>
-                </div>
-
-                <div class="week">
-                    <span class="empty"></span><span class="empty"></span><span class="empty"></span> <span
-                        class="empty"></span><span class="empty"></span><span class="empty"></span>
-                    <span>1</span>
-                </div>
-
-                <div class="week">
-                    <span>2</span><span>3</span><span>4</span> <span>5</span><span>6</span><span>7</span><span>8</span>
-                </div>
-
-                <div class="week">
-                    <span>9</span><span>10</span><span>11</span>
-                    <span>12</span><span>13</span><span>14</span><span>15</span>
-                </div>
-
-                <div class="week">
-                    <span>16</span><span>17</span><span>18</span>
-                    <span>19</span>
-                    <span class="event ask">20<em>Lễ nạp tài</em></span>
-                    <span class="event">21<em>Tiệc cưới</em></span>
-                    <span class="event wedding">22<em>Lễ cưới</em></span>
-                </div>
-
-                <div class="week">
-                    <span>23</span><span>24</span><span>25</span>
-                    <span>26</span><span>27</span><span>28</span><span>29</span>
-                </div>
-
-                <div class="week">
-                    <span>30</span><span>31</span> <span class="empty"></span><span class="empty"></span> <span
-                        class="empty"></span><span class="empty"></span><span class="empty"></span>
+                    <div class="week">
+                        <span>30</span><span>31</span> <span class="empty"></span><span class="empty"></span> <span
+                            class="empty"></span><span class="empty"></span><span class="empty"></span>
+                    </div>
                 </div>
             </div>
+        </section>
+
+
+
+
+        <section class="relative flex items-center text-white overflow-hidden pt-0">
+
+            <!-- VIDEO BACKGROUND -->
+            <video class="inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                <source src="./videos/chu-re-1.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ video.
+            </video>
+        </section>
+
+        <section class="relative flex items-center text-white overflow-hidden pt-0">
+
+            <!-- VIDEO BACKGROUND -->
+            <video class="inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                <source src="./videos/co-dau-1.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ video.
+            </video>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 py-10 bg-[#f6f4ef]">
+            <div class="overflow-hidden">
+                <img src="./image-canva/image-6.png" alt="image" class="w-full h-full object-cover">
+            </div>
         </div>
-    </section>
 
-
-
-
-    <section class="relative flex items-center text-white overflow-hidden pt-0">
-
-        <!-- VIDEO BACKGROUND -->
-        <video
-            class="inset-0 w-full h-full object-cover"
-            autoplay
-            muted
-            loop
-            playsinline>
-            <source src="./videos/chu-re-1.mp4" type="video/mp4">
-            Trình duyệt không hỗ trợ video.
-        </video>
-    </section>
-
-    <section class="relative flex items-center text-white overflow-hidden pt-0">
-
-        <!-- VIDEO BACKGROUND -->
-        <video
-            class="inset-0 w-full h-full object-cover"
-            autoplay
-            muted
-            loop
-            playsinline>
-            <source src="./videos/co-dau-1.mp4" type="video/mp4">
-            Trình duyệt không hỗ trợ video.
-        </video>
-    </section>
-
-    <div class="max-w-7xl mx-auto px-4 py-10 bg-[#f6f4ef]">
-        <div class="overflow-hidden">
-            <img src="./image-canva/image-6.png" alt="image" class="w-full h-full object-cover">
+        <div class="max-w-7xl mx-auto px-4 pb-10 bg-[#f6f4ef]">
+            <div class="overflow-hidden">
+                <img src="./image-canva/image-1.png" alt="image" class="w-full h-full object-cover">
+            </div>
         </div>
-    </div>
 
-    <div class="max-w-7xl mx-auto px-4 pb-10 bg-[#f6f4ef]">
-        <div class="overflow-hidden">
-            <img src="./image-canva/image-1.png" alt="image" class="w-full h-full object-cover">
+
+
+        <div class="max-w-7xl mx-auto px-4 py-10 bg-[#f6f4ef]">
+            <div class="overflow-hidden">
+                <img src="./image-canva/image-4.png" alt="image" class="w-full h-full object-cover">
+            </div>
         </div>
-    </div>
-
-
-
-    <div class="max-w-7xl mx-auto px-4 py-10 bg-[#f6f4ef]">
-        <div class="overflow-hidden">
-            <img src="./image-canva/image-4.png" alt="image" class="w-full h-full object-cover">
-        </div>
-    </div>
-<!--
+        <!--
     <div class="max-w-7xl mx-auto px-4 py-10 bg-[#f6f4ef]">
         <div class="overflow-hidden">
             <img src="./image-canva/image-5.png" alt="image" class="w-full h-full object-cover">
         </div>
     </div> -->
 
-    </section>
+        </section>
 
 
-    <!-- SCRAPBOOK LIGHTBOX -->
-    <div id="photo-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center
+        <!-- SCRAPBOOK LIGHTBOX -->
+        <div id="photo-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center
        bg-[#f6f4ef]/85 backdrop-blur-sm px-4">
-        <div class="relative bg-white p-3 shadow-2xl
+            <div class="relative bg-white p-3 shadow-2xl
          max-w-[90vw] max-h-[90vh]">
-            <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] object-contain
+                <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] object-contain
            rotate-[0.3deg]" />
+            </div>
         </div>
-    </div>
 
-    <section class="py-20 bg-[#f6f6f4]">
-        <div class="max-w-5xl mx-auto px-6">
+        <section class="py-20 bg-[#f6f6f4]">
+            <div class="max-w-5xl mx-auto px-6">
 
-          <h2 class="text-center text-4xl font-serif text-[#5a6d4a] mb-12 tracking-wide">
-            HÀNH TRÌNH YÊU THƯƠNG
-          </h2>
+                <h2 class="text-center text-4xl font-serif text-[#5a6d4a] mb-12 tracking-wide">
+                    HÀNH TRÌNH YÊU THƯƠNG
+                </h2>
 
-          <div class="grid grid-cols-2 gap-6">
+                <div class="grid grid-cols-2 gap-6">
 
-            <img src="images/HAN04292.JPG" class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500"/>
+                    <img src="images/HAN04292.JPG"
+                        class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
 
-            <img src="images/HAN04112.JPG" class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500"/>
+                    <img src="images/HAN04112.JPG"
+                        class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
 
-            <img src="images/HAN04081.JPG" class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500"/>
+                    <img src="images/HAN04081.JPG"
+                        class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
 
-            <!-- ảnh cuối -->
-            <div class="relative cursor-pointer gallery-img">
+                    <!-- ảnh cuối -->
+                    <div class="relative cursor-pointer gallery-img">
 
-              <img src="images/HAN04174.JPG" class="rounded-2xl"/>
+                        <img src="images/HAN04174.JPG" class="rounded-2xl" />
 
-              <div id="album-image-length" class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center text-white text-3xl font-semibold">
-                +6
-              </div>
+                        <div id="album-image-length"
+                            class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center text-white text-3xl font-semibold">
+                            +6
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
-
-          </div>
-
-        </div>
-      </section>
+        </section>
 
 
-      <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[999999]">
+        <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-[999999]">
 
-        <!-- counter -->
-        <div id="counter" class="absolute top-6 left-6 text-white text-lg">
-          1 / 10
-        </div>
+            <!-- counter -->
+            <div id="counter" class="absolute top-6 left-6 text-white text-lg">
+                1 / 10
+            </div>
 
-        <!-- close -->
-        <button id="closeGallery" class="absolute top-6 right-6 text-white text-3xl">
-          ✕
-        </button>
+            <!-- close -->
+            <button id="closeGallery" class="absolute top-6 right-6 text-white text-3xl">
+                ✕
+            </button>
 
-        <!-- prev -->
-        <button id="prev" class="absolute left-6 text-white text-4xl">
-          ‹
-        </button>
+            <!-- prev -->
+            <button id="prev" class="absolute left-6 text-white text-4xl">
+                ‹
+            </button>
 
-        <!-- main image -->
-        <img id="lightboxImage"
-             class="max-h-[80vh] rounded-2xl shadow-2xl"/>
+            <!-- main image -->
+            <img id="lightboxImage" class="max-h-[80vh] rounded-2xl shadow-2xl" />
 
-        <!-- next -->
-        <button id="next" class="absolute right-6 text-white text-4xl">
-          ›
-        </button>
+            <!-- next -->
+            <button id="next" class="absolute right-6 text-white text-4xl">
+                ›
+            </button>
 
-        <!-- thumbnails -->
-        <div id="thumbnails"
-             class="absolute bottom-6 flex gap-3 overflow-x-auto px-6">
-        </div>
+            <!-- thumbnails -->
+            <div id="thumbnails" class="absolute bottom-6 flex gap-3 overflow-x-auto px-6">
+            </div>
 
-      </div>
-
-
-    <!-- ===== Wedding Map Section ===== -->
-<section id="wedding-location" class="py-20 bg-gradient-to-b from-rose-50 to-white">
-    <div class="max-w-6xl mx-auto px-6">
-
-      <!-- Title -->
-      <div class="text-center mb-14">
-        <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-4">
-          Địa Điểm Tổ Chức
-        </h2>
-        <p class="text-gray-500 text-lg">
-          Hân hạnh đón tiếp quý khách tại tư gia hai bên
-        </p>
-      </div>
-
-      <!-- Grid -->
-      <div class="grid md:grid-cols-2 gap-10">
-
-        <!-- ===== Nhà Trai ===== -->
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
-
-          <!-- Map -->
-          <div class="h-80 w-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.1532093542957!2d105.2928182356334!3d21.14341543926637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134627179f03d7d%3A0x8ece33f10c4256ec!2zQuG6o28gWcOqbiwgVGhhbmggVGjhu6d5LCBQaMO6IFRo4buNLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1772641891283!5m2!1svi!2s"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-
-          <!-- Info -->
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold text-rose-500 mb-3">
-              📍 Nhà Trai
-            </h3>
-
-            <p class="text-gray-600 mb-6">
-              Địa chỉ: Khu 3 Bảo Yên, Xã Thanh Thủy, Tỉnh Phú Thọ
-            </p>
-
-            <a href="https://maps.app.goo.gl/daGti68pJmhtbMtc6"
-               target="_blank"
-               class="inline-block bg-rose-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-rose-600 transition duration-300">
-              Chỉ Đường
-            </a>
-          </div>
-        </div>
-
-        <!-- ===== Nhà Gái ===== -->
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
-
-          <!-- Map -->
-          <div class="h-80 w-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d937.0230780725684!2d105.31499234048144!3d21.40001982844539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313493dc3d2d27cd%3A0xf04e67f507f3c3c4!2zUGjhu5EgTmfhu41jIEhvYSwgeC4gUGjDuSBOaW5oLCBQaMO5IE5pbmgsIFBow7ogVGjhu40sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1772641663861!5m2!1svi!2s"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-
-          <!-- Info -->
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold text-rose-500 mb-3">
-              📍 Nhà Gái
-            </h3>
-
-            <p class="text-gray-600 mb-6">
-              Địa chỉ: Khu Đồng Giao, Xã Phù Ninh, Tỉnh Phú Thọ
-            </p>
-
-            <a href="https://maps.app.goo.gl/sdhAkawtc3tKBSJ86"
-               target="_blank"
-               class="inline-block bg-rose-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-rose-600 transition duration-300">
-              Chỉ Đường
-            </a>
-          </div>
         </div>
 
 
+        <!-- ===== Wedding Map Section ===== -->
+        <section id="wedding-location" class="py-20 bg-gradient-to-b from-rose-50 to-white">
+            <div class="max-w-6xl mx-auto px-6">
 
-      </div>
-    </div>
-  </section>
+                <!-- Title -->
+                <div class="text-center mb-14">
+                    <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-4">
+                        Địa Điểm Tổ Chức
+                    </h2>
+                    <p class="text-gray-500 text-lg">
+                        Hân hạnh đón tiếp quý khách tại tư gia hai bên
+                    </p>
+                </div>
 
-  <!-- ===== Wedding Gift Click Box Section ===== -->
-<section id="wedding-gift" class="relative py-24 bg-gradient-to-br from-rose-100 via-white to-pink-50 overflow-hidden">
+                <!-- Grid -->
+                <div class="grid md:grid-cols-2 gap-10">
 
-    <!-- Blur background decoration -->
-    <div class="absolute -top-20 -left-20 w-96 h-96 bg-rose-300 rounded-full blur-3xl opacity-20"></div>
-    <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-pink-300 rounded-full blur-3xl opacity-20"></div>
+                    <!-- ===== Nhà Trai ===== -->
+                    <div
+                        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
 
-    <div class="relative max-w-4xl mx-auto px-6 text-center">
+                        <!-- Map -->
+                        <div class="h-80 w-full">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.1532093542957!2d105.2928182356334!3d21.14341543926637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134627179f03d7d%3A0x8ece33f10c4256ec!2zQuG6o28gWcOqbiwgVGhhbmggVGjhu6d5LCBQaMO6IFRo4buNLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1772641891283!5m2!1svi!2s"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
 
-      <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-6 tracking-wide">
-        💖 Mừng Cưới
-      </h2>
+                        <!-- Info -->
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold text-rose-500 mb-3">
+                                📍 Nhà Trai
+                            </h3>
 
-      <p class="text-gray-600 text-lg mb-12">
-        Mọi yêu thương xa xin gửi về hộp quà
-      </p>
+                            <p class="text-gray-600 mb-6">
+                                Địa chỉ: Khu 3 Bảo Yên, Xã Thanh Thủy, Tỉnh Phú Thọ
+                            </p>
 
-      <!-- Gift Box -->
-      <div onclick="openGift()"
-           class="cursor-pointer inline-block group transition duration-500 hover:scale-110">
+                            <a href="https://maps.app.goo.gl/daGti68pJmhtbMtc6" target="_blank"
+                                class="inline-block bg-rose-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-rose-600 transition duration-300">
+                                Chỉ Đường
+                            </a>
+                        </div>
+                    </div>
 
-        <div class="w-40 h-40 mx-auto bg-gradient-to-br from-rose-400 to-pink-500 rounded-3xl shadow-2xl flex items-center justify-center relative">
+                    <!-- ===== Nhà Gái ===== -->
+                    <div
+                        class="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-500">
 
-          <!-- Ribbon -->
-          <div class="absolute top-0 w-full h-6 bg-white/70 rounded-t-3xl"></div>
-          <div class="absolute left-1/2 -translate-x-1/2 w-6 h-full bg-white/70"></div>
+                        <!-- Map -->
+                        <div class="h-80 w-full">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d937.0230780725684!2d105.31499234048144!3d21.40001982844539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313493dc3d2d27cd%3A0xf04e67f507f3c3c4!2zUGjhu5EgTmfhu41jIEhvYSwgeC4gUGjDuSBOaW5oLCBQaMO5IE5pbmgsIFBow7ogVGjhu40sIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1772641663861!5m2!1svi!2s"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
 
-          <!-- Icon -->
-          <span class="text-6xl animate-bounce">🎁</span>
+                        <!-- Info -->
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold text-rose-500 mb-3">
+                                📍 Nhà Gái
+                            </h3>
+
+                            <p class="text-gray-600 mb-6">
+                                Địa chỉ: Khu Đồng Giao, Xã Phù Ninh, Tỉnh Phú Thọ
+                            </p>
+
+                            <a href="https://maps.app.goo.gl/sdhAkawtc3tKBSJ86" target="_blank"
+                                class="inline-block bg-rose-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-rose-600 transition duration-300">
+                                Chỉ Đường
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Wedding Gift Click Box Section ===== -->
+        <section id="wedding-gift"
+            class="relative py-24 bg-gradient-to-br from-rose-100 via-white to-pink-50 overflow-hidden">
+
+            <!-- Blur background decoration -->
+            <div class="absolute -top-20 -left-20 w-96 h-96 bg-rose-300 rounded-full blur-3xl opacity-20"></div>
+            <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-pink-300 rounded-full blur-3xl opacity-20"></div>
+
+            <div class="relative max-w-4xl mx-auto px-6 text-center">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-6 tracking-wide">
+                    💖 Mừng Cưới
+                </h2>
+
+                <p class="text-gray-600 text-lg mb-12">
+                    Mọi yêu thương xa xin gửi về hộp quà
+                </p>
+
+                <!-- Gift Box -->
+                <div onclick="openGift()"
+                    class="cursor-pointer inline-block group transition duration-500 hover:scale-110">
+
+                    <div
+                        class="w-40 h-40 mx-auto bg-gradient-to-br from-rose-400 to-pink-500 rounded-3xl shadow-2xl flex items-center justify-center relative">
+
+                        <!-- Ribbon -->
+                        <div class="absolute top-0 w-full h-6 bg-white/70 rounded-t-3xl"></div>
+                        <div class="absolute left-1/2 -translate-x-1/2 w-6 h-full bg-white/70"></div>
+
+                        <!-- Icon -->
+                        <span class="text-6xl animate-bounce">🎁</span>
+                    </div>
+
+                    <p class="mt-6 text-rose-600 font-semibold tracking-wide">
+                        Nhấn để mở quà
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ===== Gift Modal ===== -->
+        <div id="giftModal"
+            class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center hidden z-[999999999]">
+
+            <div class="bg-white rounded-3xl shadow-2xl max-w-5xl w-full mx-6 p-10 relative animate-fadeIn">
+
+                <!-- Close Button -->
+                <button onclick="closeGift()" class="absolute top-5 right-5 text-gray-400 hover:text-rose-500 text-2xl">
+                    ✕
+                </button>
+
+
+
+                <div class="grid md:grid-cols-2 gap-10">
+
+                    <!-- CHÚ RỂ -->
+                    <div class="text-center">
+                        <h4 class="text-xl font-semibold text-rose-500 mb-4">🤵 Chú Rể</h4>
+                        <img src="./images/qr-chu-re.jpeg" class="w-52 h-52 mx-auto rounded-2xl shadow-lg mb-4"
+                            style="height: 120px; width: auto">
+                        <p class="font-medium">Techcombank</p>
+                        <p>1903 9720 7600 15</p>
+                        <p>Nguyễn Trọng Thảo</p>
+                    </div>
+
+                    <!-- CÔ DÂU -->
+                    <div class="text-center">
+                        <h4 class="text-xl font-semibold text-pink-500 mb-4">👰 Cô Dâu</h4>
+                        <img src="./images/qr-co-dau.jpeg" class="w-52 h-52 mx-auto rounded-2xl shadow-lg mb-4"
+                            style="height: 120px; width: auto">
+                        <p class="font-medium">MbBank</p>
+                        <p>0530148288686</p>
+                        <p>Nguyễn Phương Ngọc</p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <p class="mt-6 text-rose-600 font-semibold tracking-wide">
-          Nhấn để mở quà
-        </p>
+        <!-- ===== Luxury Music Button ===== -->
+        <div class="fixed top-6 right-6 z-50">
 
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ===== Gift Modal ===== -->
-<div id="giftModal"
-class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center hidden z-[999999999]">
-
-<div class="bg-white rounded-3xl shadow-2xl max-w-5xl w-full mx-6 p-10 relative animate-fadeIn">
-
-<!-- Close Button -->
-<button onclick="closeGift()"
-       class="absolute top-5 right-5 text-gray-400 hover:text-rose-500 text-2xl">
- ✕
-</button>
-
-
-
-<div class="grid md:grid-cols-2 gap-10">
-
- <!-- CHÚ RỂ -->
- <div class="text-center">
-   <h4 class="text-xl font-semibold text-rose-500 mb-4">🤵 Chú Rể</h4>
-   <img src="./images/qr-chu-re.jpeg"
-        class="w-52 h-52 mx-auto rounded-2xl shadow-lg mb-4" style="height: 120px; width: auto">
-   <p class="font-medium">Techcombank</p>
-   <p>1903 9720 7600 15</p>
-   <p>Nguyễn Trọng Thảo</p>
- </div>
-
- <!-- CÔ DÂU -->
- <div class="text-center">
-   <h4 class="text-xl font-semibold text-pink-500 mb-4">👰 Cô Dâu</h4>
-   <img src="./images/qr-co-dau.jpeg"
-        class="w-52 h-52 mx-auto rounded-2xl shadow-lg mb-4" style="height: 120px; width: auto">
-   <p class="font-medium">MbBank</p>
-   <p>0530148288686</p>
-   <p>Nguyễn Phương Ngọc</p>
- </div>
-
-</div>
-
-</div>
-</div>
-
-<!-- ===== Luxury Music Button ===== -->
-<div class="fixed top-6 right-6 z-50">
-
-    <button id="musicBtn"
-      onclick="toggleMusic()"
-      class="relative w-12 h-12 rounded-full
+            <button id="musicBtn" onclick="toggleMusic()" class="relative w-12 h-12 rounded-full
              border border-white/50
              shadow-2xl flex items-center justify-center
              hover:scale-110 transition duration-500">
 
-      <!-- Animated Ring -->
-      <span id="musicRing"
-        class="absolute w-16 h-16 rounded-full border-2 border-rose-400 animate-ping opacity-75 hidden">
-      </span>
+                <!-- Animated Ring -->
+                <span id="musicRing"
+                    class="absolute w-16 h-16 rounded-full border-2 border-rose-400 animate-ping opacity-75 hidden">
+                </span>
 
-      <!-- Icon -->
-      <span id="musicIcon" class="text-2xl text-rose-600">
-        <img src="./music.svg" alt="">
-      </span>
+                <!-- Icon -->
+                <span id="musicIcon" class="text-2xl text-rose-600">
+                    <img src="./music.svg" alt="">
+                </span>
 
-    </button>
+            </button>
 
-  </div>
+        </div>
 
-<audio id="bgMusic" loop playsinline>
-    <source src="./le-duong.mp3" type="audio/mpeg">
-  </audio>
+        <audio id="bgMusic" loop playsinline>
+            <source src="./le-duong.mp3" type="audio/mpeg">
+        </audio>
 
-  <canvas id="snow"></canvas>
+        <canvas id="snow"></canvas>
+    </div>
 
 </body>
 
@@ -755,129 +736,126 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
 
     // Tự chạy khi người dùng click bất kỳ đâu lần đầu
     document.addEventListener("click", function autoStart() {
-      if (!isPlaying) {
-        playMusic();
-      }
-      document.removeEventListener("click", autoStart);
+        if (!isPlaying) {
+            playMusic();
+        }
+        document.removeEventListener("click", autoStart);
     });
 
     function toggleMusic() {
-      if (music.paused) {
-        playMusic();
-      } else {
-        pauseMusic();
-      }
+        if (music.paused) {
+            playMusic();
+        } else {
+            pauseMusic();
+        }
     }
 
     function playMusic() {
-      music.volume = 0;
-      music.play();
+        music.volume = 0;
+        music.play();
 
-      // Fade in
-      let fade = setInterval(() => {
-        if (music.volume < 0.3) {
-          music.volume += 0.02;
-        } else {
-          clearInterval(fade);
-        }
-      }, 100);
+        // Fade in
+        let fade = setInterval(() => {
+            if (music.volume < 0.3) {
+                music.volume += 0.02;
+            } else {
+                clearInterval(fade);
+            }
+        }, 100);
 
-    //   icon.innerHTML = "❚❚";
-      ring.classList.remove("hidden");
-      isPlaying = true;
+        //   icon.innerHTML = "❚❚";
+        ring.classList.remove("hidden");
+        isPlaying = true;
     }
 
     function pauseMusic() {
-      music.pause();
-      icon.innerHTML = "▶";
-      ring.classList.add("hidden");
+        music.pause();
+        icon.innerHTML = "▶";
+        ring.classList.add("hidden");
     }
-    </script>
+</script>
 
 <script>
     function openGift() {
-      document.getElementById("giftModal").classList.remove("hidden");
+        document.getElementById("giftModal").classList.remove("hidden");
     }
 
     function closeGift() {
-      document.getElementById("giftModal").classList.add("hidden");
+        document.getElementById("giftModal").classList.add("hidden");
     }
-    </script>
+</script>
 
 <script>
 
     const images = [
-    "images/HAN04292.JPG",
-    "images/HAN04112.JPG",
-    "images/HAN04081.JPG",
-    "images/HAN04174.JPG",
+        "images/HAN04292.JPG",
+        "images/HAN04112.JPG",
+        "images/HAN04081.JPG",
+        "images/HAN04174.JPG",
 
-    "images/HAN04160.JPG",
-    "images/HAN04174.JPG",
-    "images/HAN04186.JPG",
-    "images/HAN04186.JPG",
-    "images/HAN04191.JPG",
-    "images/HAN04198.JPG",
-    "images/HAN04203.JPG",
-    "images/HAN04207.JPG",
-    "images/HAN04272.JPG",
-    "images/HAN04279.JPG",
-    "images/HAN04292.JPG",
+        "images/HAN04160.JPG",
+        "images/HAN04186.JPG",
+        "images/HAN04191.JPG",
+        "images/HAN04198.JPG",
+        "images/HAN04203.JPG",
+        "images/HAN04207.JPG",
+        "images/HAN04272.JPG",
+        "images/HAN04279.JPG",
 
-    "images/HAN02055.JPG",
-  "images/HAN02145.JPG",
-  "images/HAN02184.JPG",
-  "images/HAN02201.JPG",
-  "images/HAN02218.JPG",
-  "images/HAN02229.JPG",
-  "images/HAN02235.JPG",
-  "images/HAN02293.JPG",
-  "images/HAN02328.JPG",
-  "images/HAN02365.JPG",
-  "images/HAN02367.JPG",
-  "images/HAN02423.JPG",
-  "images/HAN02428.JPG",
-  "images/HAN02452.JPG",
-  "images/HAN02456.JPG",
-  "images/HAN02463.JPG",
-  "images/HAN02526.JPG",
-  "images/HAN02533.JPG",
-  "images/HAN02540.JPG",
-  "images/HAN02644.JPG",
-  "images/HAN02784.JPG",
-  "images/HAN02795.JPG",
-  "images/HAN02813.JPG",
-  "images/HAN02824.JPG",
-  "images/HAN02830.JPG",
-  "images/HAN02842.JPG",
-  "images/HAN03172.JPG",
-"images/HAN03244.JPG",
-"images/HAN03268.JPG",
-"images/HAN03271.JPG",
-"images/HAN03279.JPG",
-"images/HAN03286.JPG",
-"images/HAN03308.JPG",
-"images/HAN03318.JPG",
-"images/HAN03325.JPG",
-"images/HAN03331.JPG",
-"images/HAN03358.JPG",
-"images/HAN03370.JPG",
-"images/HAN03404.JPG",
-"images/HAN03459.JPG",
-"images/HAN03494.JPG",
-"images/HAN03500.JPG",
-"images/HAN03572.JPG",
-"images/HAN03603.JPG",
-"images/HAN03629.JPG",
-"images/HAN03649.JPG",
-"images/HAN03659.JPG",
-"images/HAN03762.JPG",
-"images/HAN03774.JPG",
-"images/HAN03785.JPG",
-"images/HAN03798.JPG",
-"images/HAN03821.JPG",
-"images/HAN03855.JPG",
-"images/HAN03923.JPG",
+        "images/HAN02055.JPG",
+        "images/HAN02145.JPG",
+        "images/HAN02184.JPG",
+        "images/HAN02201.JPG",
+        "images/HAN02218.JPG",
+        "images/HAN02229.JPG",
+        "images/HAN02235.JPG",
+        "images/HAN02293.JPG",
+        "images/HAN02328.JPG",
+        "images/HAN02365.JPG",
+        "images/HAN02367.JPG",
+        "images/HAN02423.JPG",
+        "images/HAN02428.JPG",
+        "images/HAN02452.JPG",
+        "images/HAN02456.JPG",
+        "images/HAN02463.JPG",
+        "images/HAN02526.JPG",
+        "images/HAN02533.JPG",
+        "images/HAN02540.JPG",
+        "images/HAN02644.JPG",
+        "images/HAN02784.JPG",
+        "images/HAN02795.JPG",
+        "images/HAN02813.JPG",
+        "images/HAN02824.JPG",
+        "images/HAN02830.JPG",
+        "images/HAN02842.JPG",
+        "images/HAN03172.JPG",
+        "images/HAN03244.JPG",
+        "images/HAN03268.JPG",
+        "images/HAN03271.JPG",
+        "images/HAN03279.JPG",
+        "images/HAN03286.JPG",
+        "images/HAN03308.JPG",
+        "images/HAN03318.JPG",
+        "images/HAN03325.JPG",
+        "images/HAN03331.JPG",
+        "images/HAN03358.JPG",
+        "images/HAN03370.JPG",
+        "images/HAN03404.JPG",
+        "images/HAN03459.JPG",
+        "images/HAN03494.JPG",
+        "images/HAN03500.JPG",
+        "images/HAN03572.JPG",
+        "images/HAN03603.JPG",
+        "images/HAN03629.JPG",
+        "images/HAN03649.JPG",
+        "images/HAN03659.JPG",
+        "images/HAN03762.JPG",
+        "images/HAN03774.JPG",
+        "images/HAN03785.JPG",
+        "images/HAN03798.JPG",
+        "images/HAN03821.JPG",
+        "images/HAN03855.JPG",
+        "images/HAN03923.JPG",
 
     ];
 
@@ -892,52 +870,52 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
     const counter = document.getElementById("counter");
     const thumbnails = document.getElementById("thumbnails");
 
-    function openGallery(index){
-      current = index;
-      lightbox1.classList.remove("hidden");
-      lightbox1.classList.add("flex");
-      updateImage();
-    }
-
-    function updateImage(){
-      lightboxImage.src = images[current];
-      counter.innerText = `${current+1} / ${images.length}`;
-
-      document.querySelectorAll(".thumb").forEach((el,i)=>{
-        el.classList.toggle("ring-2", i === current);
-      });
-    }
-
-    document.querySelectorAll(".gallery-img").forEach((img,i)=>{
-      img.addEventListener("click", ()=> openGallery(i));
-    });
-
-    document.getElementById("closeGallery").onclick = ()=>{
-      lightbox1.classList.add("hidden");
-    };
-
-    document.getElementById("next").onclick = ()=>{
-      current = (current+1) % images.length;
-      updateImage();
-    };
-
-    document.getElementById("prev").onclick = ()=>{
-      current = (current-1+images.length) % images.length;
-      updateImage();
-    };
-
-    images.forEach((src,i)=>{
-      const img = document.createElement("img");
-      img.src = src;
-      img.className = "thumb w-16 h-16 object-cover rounded-lg cursor-pointer";
-      img.onclick = ()=>{
-        current = i;
+    function openGallery(index) {
+        current = index;
+        lightbox1.classList.remove("hidden");
+        lightbox1.classList.add("flex");
         updateImage();
-      };
-      thumbnails.appendChild(img);
+    }
+
+    function updateImage() {
+        lightboxImage.src = images[current];
+        counter.innerText = `${current + 1} / ${images.length}`;
+
+        document.querySelectorAll(".thumb").forEach((el, i) => {
+            el.classList.toggle("ring-2", i === current);
+        });
+    }
+
+    document.querySelectorAll(".gallery-img").forEach((img, i) => {
+        img.addEventListener("click", () => openGallery(i));
     });
 
-    </script>
+    document.getElementById("closeGallery").onclick = () => {
+        lightbox1.classList.add("hidden");
+    };
+
+    document.getElementById("next").onclick = () => {
+        current = (current + 1) % images.length;
+        updateImage();
+    };
+
+    document.getElementById("prev").onclick = () => {
+        current = (current - 1 + images.length) % images.length;
+        updateImage();
+    };
+
+    images.forEach((src, i) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.className = "thumb w-16 h-16 object-cover rounded-lg cursor-pointer";
+        img.onclick = () => {
+            current = i;
+            updateImage();
+        };
+        thumbnails.appendChild(img);
+    });
+
+</script>
 
 <script>
     const canvas = document.getElementById("snow");
@@ -952,68 +930,68 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
     let snowflakes = [];
 
     function createSnowflakes() {
-      for (let i = 0; i < 20; i++) {
-        snowflakes.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          r: Math.random() * 3 + 1,
-          d: Math.random() * 1
-        });
-      }
+        for (let i = 0; i < 20; i++) {
+            snowflakes.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: Math.random() * 3 + 1,
+                d: Math.random() * 1
+            });
+        }
     }
 
     function drawSnowflakes() {
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = "white";
-      ctx.beginPath();
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = "white";
+        ctx.beginPath();
 
-      for (let i = 0; i < snowflakes.length; i++) {
-        let f = snowflakes[i];
-        ctx.moveTo(f.x, f.y);
-        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
-      }
+        for (let i = 0; i < snowflakes.length; i++) {
+            let f = snowflakes[i];
+            ctx.moveTo(f.x, f.y);
+            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+        }
 
-      ctx.fill();
-      moveSnowflakes();
+        ctx.fill();
+        moveSnowflakes();
     }
 
     let angle = 0;
 
     function moveSnowflakes() {
-      angle += 0.01;
+        angle += 0.01;
 
-      for (let i = 0; i < snowflakes.length; i++) {
-        let f = snowflakes[i];
+        for (let i = 0; i < snowflakes.length; i++) {
+            let f = snowflakes[i];
 
-        f.y += Math.pow(f.d, 2) + 0.5;
-        f.x += Math.sin(angle) * 0.5;
+            f.y += Math.pow(f.d, 2) + 0.5;
+            f.x += Math.sin(angle) * 0.5;
 
-        if (f.y > height) {
-          snowflakes[i] = {
-            x: Math.random() * width,
-            y: 0,
-            r: f.r,
-            d: f.d
-          };
+            if (f.y > height) {
+                snowflakes[i] = {
+                    x: Math.random() * width,
+                    y: 0,
+                    r: f.r,
+                    d: f.d
+                };
+            }
         }
-      }
     }
 
     function update() {
-      drawSnowflakes();
-      requestAnimationFrame(update);
+        drawSnowflakes();
+        requestAnimationFrame(update);
     }
 
     createSnowflakes();
     update();
 
     window.addEventListener("resize", () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
     });
-    </script>
+</script>
 
 <script>
     const lightbox = document.getElementById("photo-lightbox");
