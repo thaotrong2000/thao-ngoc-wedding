@@ -495,7 +495,7 @@
 
               <img src="images/HAN04174.JPG" class="rounded-2xl"/>
 
-              <div class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center text-white text-3xl font-semibold">
+              <div id="album-image-length" class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center text-white text-3xl font-semibold">
                 +6
               </div>
 
@@ -807,11 +807,11 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
 <script>
 
     const images = [
-    "images/HAN03955.JPG",
-    "images/HAN03989.JPG",
-
-    "images/HAN04081.JPG",
+    "images/HAN04292.JPG",
     "images/HAN04112.JPG",
+    "images/HAN04081.JPG",
+    "images/HAN04174.JPG",
+
     "images/HAN04160.JPG",
     "images/HAN04174.JPG",
     "images/HAN04186.JPG",
@@ -824,9 +824,68 @@ class="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-cent
     "images/HAN04279.JPG",
     "images/HAN04292.JPG",
 
+    "images/HAN02055.JPG",
+  "images/HAN02145.JPG",
+  "images/HAN02184.JPG",
+  "images/HAN02201.JPG",
+  "images/HAN02218.JPG",
+  "images/HAN02229.JPG",
+  "images/HAN02235.JPG",
+  "images/HAN02293.JPG",
+  "images/HAN02328.JPG",
+  "images/HAN02365.JPG",
+  "images/HAN02367.JPG",
+  "images/HAN02423.JPG",
+  "images/HAN02428.JPG",
+  "images/HAN02452.JPG",
+  "images/HAN02456.JPG",
+  "images/HAN02463.JPG",
+  "images/HAN02526.JPG",
+  "images/HAN02533.JPG",
+  "images/HAN02540.JPG",
+  "images/HAN02644.JPG",
+  "images/HAN02784.JPG",
+  "images/HAN02795.JPG",
+  "images/HAN02813.JPG",
+  "images/HAN02824.JPG",
+  "images/HAN02830.JPG",
+  "images/HAN02842.JPG",
+  "images/HAN03172.JPG",
+"images/HAN03244.JPG",
+"images/HAN03268.JPG",
+"images/HAN03271.JPG",
+"images/HAN03279.JPG",
+"images/HAN03286.JPG",
+"images/HAN03308.JPG",
+"images/HAN03318.JPG",
+"images/HAN03325.JPG",
+"images/HAN03331.JPG",
+"images/HAN03358.JPG",
+"images/HAN03370.JPG",
+"images/HAN03404.JPG",
+"images/HAN03459.JPG",
+"images/HAN03494.JPG",
+"images/HAN03500.JPG",
+"images/HAN03572.JPG",
+"images/HAN03603.JPG",
+"images/HAN03629.JPG",
+"images/HAN03649.JPG",
+"images/HAN03659.JPG",
+"images/HAN03762.JPG",
+"images/HAN03774.JPG",
+"images/HAN03785.JPG",
+"images/HAN03798.JPG",
+"images/HAN03821.JPG",
+"images/HAN03855.JPG",
+"images/HAN03923.JPG",
+
     ];
 
     let current = 0;
+
+    const albumLength = document.getElementById('album-image-length');
+
+    albumLength.textContent = `+${images.length}`;
 
     const lightbox1 = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
