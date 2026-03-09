@@ -492,8 +492,8 @@
 
                 <div class="grid grid-cols-2 gap-6">
 
-                    <img src="images/HAN04292.JPG" loading="lazy"
-                        class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
+                    <img loading="lazy" src="images/HAN04292.JPG"
+                        class="gallery-img rounded-2xl cursor-pointer" />
 
                     <img src="images/HAN04112.JPG" loading="lazy"
                         class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
@@ -939,6 +939,7 @@
     images.forEach((src, i) => {
         const img = document.createElement("img");
         img.src = src;
+        img.loading = "lazy";
         img.className = "thumb w-16 h-16 object-cover rounded-lg cursor-pointer";
         img.onclick = () => {
             current = i;
