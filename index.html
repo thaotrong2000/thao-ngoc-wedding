@@ -236,10 +236,10 @@
         }
 
         .from-rose-50 {
-    --tw-gradient-from: #fffcf3 var(--tw-gradient-from-position) !important;
-    --tw-gradient-to: rgb(255 241 242 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
+            --tw-gradient-from: #fffcf3 var(--tw-gradient-from-position) !important;
+            --tw-gradient-to: rgb(255 241 242 / 0) var(--tw-gradient-to-position);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        }
     </style>
 </head>
 
@@ -492,19 +492,19 @@
 
                 <div class="grid grid-cols-2 gap-6">
 
-                    <img src="images/HAN04292.JPG"
+                    <img src="images/HAN04292.JPG" loading="lazy"
                         class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
 
-                    <img src="images/HAN04112.JPG"
+                    <img src="images/HAN04112.JPG" loading="lazy"
                         class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
 
-                    <img src="images/HAN04081.JPG"
+                    <img src="images/HAN04081.JPG" loading="lazy"
                         class="gallery-img rounded-2xl cursor-pointer hover:scale-105 transition duration-500" />
 
                     <!-- ảnh cuối -->
                     <div class="relative cursor-pointer gallery-img">
 
-                        <img src="images/HAN04174.JPG" class="rounded-2xl" />
+                        <img src="images/HAN04174.JPG" loading="lazy" class="rounded-2xl" />
 
                         <div id="album-image-length"
                             class="absolute inset-0 bg-black/40 rounded-2xl flex items-center justify-center text-white text-3xl font-semibold">
@@ -537,7 +537,7 @@
             </button>
 
             <!-- main image -->
-            <img id="lightboxImage" class="max-h-[80vh] rounded-2xl shadow-2xl" />
+            <img id="lightboxImage" loading="lazy" class="max-h-[80vh] rounded-2xl shadow-2xl" />
 
             <!-- next -->
             <button id="next" class="absolute right-6 text-white text-4xl">
@@ -635,8 +635,7 @@
         </section>
 
         <!-- ===== Wedding Gift Click Box Section ===== -->
-        <section id="wedding-gift"
-            class="relative py-24 py-20 bg-gradient-to-b from-rose-50 to-white overflow-hidden">
+        <section id="wedding-gift" class="relative py-24 py-20 bg-gradient-to-b from-rose-50 to-white overflow-hidden">
 
             <!-- Blur background decoration -->
             <div class="absolute -top-20 -left-20 w-96 h-96 rounded-full blur-3xl opacity-20"></div>
@@ -674,6 +673,15 @@
                 </div>
 
             </div>
+        </section>
+
+        <section class="relative flex items-center text-white overflow-hidden">
+
+            <!-- VIDEO BACKGROUND -->
+            <video class="inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+                <source src="./videos/footer.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ video.
+            </video>
         </section>
 
 
